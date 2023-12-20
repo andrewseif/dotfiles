@@ -170,7 +170,20 @@ lspconfig["dockerls"].setup({
 	on_attach = on_attach,
 })
 
+lspconfig["tflint"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+local lsp_options = {
+	on_attach = on_attach,
+	capabilities = capabilities,
+}
+
 lspconfig["terraformls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+	lspconfig.terraformls.setup(vim.tbl_deep_extend("force", lsp_options, {
+		cmd = { "/opt/homebrew/bin/terraform-ls", "serve" },
+	})),
 })
