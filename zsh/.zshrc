@@ -112,5 +112,6 @@ source $ZSH/oh-my-zsh.sh
 alias vim=nvim
 alias tm=tmux
 alias tm=tmux
+export PATH=/opt/homebrew/bin:$PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
