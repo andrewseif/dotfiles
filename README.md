@@ -74,32 +74,33 @@ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 ```
 cp kitty.conf to ~/.config/kitty/
 ```
+### adding QEMU
+``````
+dnf install @virtualization
+``````
 
+### Download Flatpak
 ```
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 
+### Install flatpak productivity apps
 ```
 flatpak install flathub com.github.xournalpp.xournalpp
 flatpak install flathub com.obsproject.Studio
 flatpak install flathub com.discordapp.Discord
+flatpak install flathub com.slack.Slack
+flatpak install flathub io.github.bkueng.qMasterPassword
+flatpak install flathub org.videolan.VLC
+flatpak install flathub com.jetbrains.IntelliJ-IDEA-Ultimate
+flatpak install flathub us.zoom.Zoom
+flatpak install flathub com.github.IsmaelMartinez.teams_for_linux
+flatpak install flathub com.microsoft.Edge
+flatpak install flathub com.brave.Browser
+flatpak install flathub org.mozilla.Thunderbird
+flatpak install flathub com.belmoussaoui.snowglobe
 ```
 
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
 
 #### discord theme
 
