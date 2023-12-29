@@ -50,13 +50,31 @@ source ~/.zshrc
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 ``````
 
+``````
+cp kitty.conf to ~/.config/kitty/
+``````
+``````
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+``````
 
-### install discord
 ``````
-sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf update
-sudo dnf install discord
+flatpak install discord
+flatpak install obs studio 
+flatpak install slack
+flatpak install 
 ``````
+``````
+
+``````
+``````
+
+``````
+``````
+``````
+
+``````
+``````
+
 #### discord theme
 ``````
 wget https://github.com/BetterDiscord/Installer/releases/latest/download/BetterDiscord-Linux.AppImage
@@ -65,10 +83,7 @@ wget https://github.com/BetterDiscord/Installer/releases/latest/download/BetterD
 cp mocha.theme.css
 ``````
 
-### install slack
-``````
-wget https://downloads.slack-edge.com/releases/linux/4.35.131/prod/x64/slack-4.35.131-0.1.el8.x86_64.rpm
-``````
+
 #### slack theme
 ``````
 #1E1E2E,#F8F8FA,#CBA6F7,#1E1E2E,#11111B,#CDD6F4,#CBA6F7,#EBA0AC,#1E1E2E,#CDD6F4
