@@ -77,6 +77,7 @@ cp kitty.conf to ~/.config/kitty/
 ### adding QEMU
 ``````
 dnf install @virtualization
+dnf install qemu -y 
 ``````
 
 ### Download Flatpak
