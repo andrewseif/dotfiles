@@ -24,3 +24,32 @@ select * from accounts;
 to be able to see updated data refresh the view.
 refresh materialized view materialized_view;
 
+CREATE TABLE accounts (
+    id SERIAL PRIMARY KEY,
+    owner VARCHAR(255) NOT NULL,
+    balance DECIMAL(10, 2) NOT NULL,
+    currency VARCHAR(3) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE OR REPLACE FUNCTION add_entries_to_accounts()
+RETURNS VOID AS $$
+DECLARE
+    i INT := 1;
+BEGIN
+    WHILE i <= 50000 LOOP
+        INSERT INTO accounts (id, owner, balance, currency, created_at)
+        VALUES (
+            DEFAULT,                        -- Assuming id is a serial or identity column
+            'Owner ' || i,                  -- Sample owner value
+            random() * 1000,                -- Sample balance value (adjust as needed)
+            'USD',                          -- Sample currency value
+            now() - (i || ' days')::INTERVAL -- Sample created_at value
+        );
+        
+        i := i + 1;
+    END LOOP;
+END;
+$$ LANGUAGE PLPGSQL;
+
+select add_entries_to_accounts();
