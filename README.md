@@ -7,7 +7,7 @@ my dotfiles, for a unified dev experience across multiple devices.
 ### install primary utility tools
 
 ```
-sudo dnf install curl wget htop xclip neovim fd-find bat lsd net-tools wireshark-devel bind-utils git zsh nnn
+sudo sudo dnf install curl wget htop xclip neovim fd-find bat lsd net-tools wireshark-devel bind-utils git zsh nnn
 ```
 
 ### Run nerd fonts installer
@@ -78,7 +78,7 @@ cp ~/repos/dotfiles/kitty.conf ~/.config/kitty/
 ### Install Neovim
 
 ``````
-dnf install neovim
+sudo dnf install neovim
 ``````
 
 ``````
@@ -87,8 +87,8 @@ cp -r ~/repos/dotfiles/nvim ~/.config/
 
 ### adding QEMU
 ``````
-dnf install @virtualization
-dnf install qemu -y 
+sudo dnf install @virtualization
+sudo dnf install qemu -y 
 ``````
 
 ### Download Flatpak
@@ -158,34 +158,34 @@ python (pre-installed with fedora)
 
 #### C lang packages
 ``````
-dnf install clangd
-dnf install gcc-c++
-dnf install cmake
-dnf install csbuild
-(use it as csbuild -c 'make ...')
+
+sudo dnf install gcc-c++
+sudo dnf install cmake
+sudo dnf install csbuild
 ``````
+(use it as csbuild -c 'make ...')
 
 #### Node Js
 ``````
-dnf install nodejs
+sudo dnf install nodejs
 ``````
 
 #### Go
 ``````
-dnf install golang
+sudo dnf install golang
 ``````
 
 #### Rust
 
 ``````
-dnf install rust cargo
+sudo dnf install rust cargo
 ``````
 
 #### Java
 
 ``````
-dnf install java-devel
-dnf install maven
-dnf install java-openjdk
+sudo dnf install java-devel
+sudo dnf install maven
+sudo dnf install java-openjdk
 ``````
 
