@@ -100,6 +100,7 @@ flatpak install flathub com.microsoft.Edge
 flatpak install flathub com.brave.Browser
 flatpak install flathub org.mozilla.Thunderbird
 flatpak install flathub com.belmoussaoui.snowglobe
+flatpak install flathub org.getoutline.OutlineClient
 ```
 
 
