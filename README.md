@@ -107,6 +107,7 @@ flatpak install flathub com.belmoussaoui.snowglobe
 
 ```
 wget https://github.com/BetterDiscord/Installer/releases/latest/download/BetterDiscord-Linux.AppImage
+chmod a+x 
 ```
 
 ```
@@ -128,3 +129,49 @@ ctrl+k
 ctrl+d /ctrl+u like nvim
 
 ctrl+s fzf
+
+
+### languages to install
+
+c/c++
+nodejs
+go
+rust
+java
+python (pre-installed with fedora)
+
+
+
+#### C lang packages
+``````
+dnf install clangd
+dnf install gcc-c++
+dnf install cmake
+dnf install csbuild
+(use it as csbuild -c 'make ...')
+``````
+
+#### Node Js
+``````
+dnf install nodejs
+``````
+
+#### Go
+``````
+dnf install golang
+``````
+
+#### Rust
+
+``````
+dnf install rust cargo
+``````
+
+#### Java
+
+``````
+dnf install java-devel
+dnf install maven
+dnf install java-openjdk
+``````
+
