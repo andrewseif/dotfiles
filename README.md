@@ -13,6 +13,7 @@ sudo dnf install curl wget htop xclip neovim fd-find bat lsd net-tools wireshark
 ### Run nerd fonts installer
 
 ```
+cd repos/dotfiles
 ./nerdfonts.sh
 ```
 
@@ -29,7 +30,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 ```
 
 ```
-cp .p10k.zsh
+cp ~/repos/dotfiles/.p10k.zsh ~/
 ```
 
 ```
@@ -58,7 +59,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ### copy .zshrc file
 
 ```
-cp .zshrc
+cp ~/repos/dotfiles/.zshrc ~/
 ```
 
 ```
@@ -72,8 +73,18 @@ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 ```
 
 ```
-cp kitty.conf to ~/.config/kitty/
+cp ~/repos/dotfiles/kitty.conf ~/.config/kitty/
 ```
+### Install Neovim
+
+``````
+dnf install neovim
+``````
+
+``````
+cp -r ~/repos/dotfiles/nvim ~/.config/
+``````
+
 ### adding QEMU
 ``````
 dnf install @virtualization
@@ -87,20 +98,20 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 ### Install flatpak productivity apps
 ```
-flatpak install flathub com.github.xournalpp.xournalpp
-flatpak install flathub com.obsproject.Studio
-flatpak install flathub com.discordapp.Discord
-flatpak install flathub com.slack.Slack
-flatpak install flathub io.github.bkueng.qMasterPassword
-flatpak install flathub org.videolan.VLC
-flatpak install flathub com.jetbrains.IntelliJ-IDEA-Ultimate
-flatpak install flathub us.zoom.Zoom
-flatpak install flathub com.github.IsmaelMartinez.teams_for_linux
-flatpak install flathub com.microsoft.Edge
-flatpak install flathub com.brave.Browser
-flatpak install flathub org.mozilla.Thunderbird
-flatpak install flathub com.belmoussaoui.snowglobe
-flatpak install flathub org.getoutline.OutlineClient
+flatpak install flathub com.github.xournalpp.xournalpp -y
+flatpak install flathub com.obsproject.Studio -y
+flatpak install flathub com.discordapp.Discord -y
+flatpak install flathub com.slack.Slack -y
+flatpak install flathub io.github.bkueng.qMasterPassword -y
+flatpak install flathub org.videolan.VLC -y
+flatpak install flathub com.jetbrains.IntelliJ-IDEA-Ultimate -y
+flatpak install flathub us.zoom.Zoom -y
+flatpak install flathub com.github.IsmaelMartinez.teams_for_linux -y
+flatpak install flathub com.microsoft.Edge -y
+flatpak install flathub com.brave.Browser -y
+flatpak install flathub org.mozilla.Thunderbird -y
+flatpak install flathub com.belmoussaoui.snowglobe -y
+flatpak install flathub org.getoutline.OutlineClient -y
 ```
 
 
@@ -112,7 +123,7 @@ chmod a+x
 ```
 
 ```
-cp mocha.theme.css
+cp ~/repos/dotfiles/mocha.theme.css
 ```
 
 #### slack theme
